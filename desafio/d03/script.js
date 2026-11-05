@@ -1,3 +1,5 @@
+//  Aula 07
+
 /*let n1 = 20
 let n2 = 6
 console.log(n1 + n2)
@@ -136,7 +138,7 @@ console.log(typeof preco)*/
 console.log(preco)
 console.log(typeof preco)*/
 
-let preco = 50
+/*let preco = 50
 let texto = String(50)
 console.log(typeof texto)
 
@@ -144,7 +146,13 @@ let produto = Number.parseFloat("25.90")
 console.log(produto)
 
 let cafe = Number.parseInt("39.90")
-console.log(cafe)
+console.log(cafe)*/
+
+
+
+    Desafio 01
+    
+
 
 
 
