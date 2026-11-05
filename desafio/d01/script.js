@@ -34,12 +34,61 @@ window.alert(`
 
     // Desafio 03
 
-    let nota = Number(window.prompt("Qual sua nota?"))
-    let frenque = Number(window.prompt("Qual a porcentagem da sua frequência?"))
+    /*let nota = Number(window.prompt("Qual sua nota?"))
+    let frenquencia = Number(window.prompt("Qual a porcentagem da sua frequência?"))
 
-    let n = nota >= 7 && frenque >= 75% 
+    let n = nota >= 7 && frenquencia >= 75 ? "Aprovado" : "Reprovado"
 
-    window.alert(`${n}`)
+    window.alert(n)*/
+
+
+    // Desafio 04
+
+   /*let idade = Number(window.prompt("Qual sua idade?"))
+    let autorizacao = window.confirm("Você possui autorização?")
+
+    let v = idade >= 18 || autorizacao ? "Acesso permitido" : "Acesso negado"
+
+    window.alert(v)*/
+
+
+    //Desafio 05
+
+   /* let valor = Number(window.prompt("Qual o valor da compra?"))
+    let cliente = window.confirm("O senhor possui cupom?")
+
+     let t = valor >= 100 && cliente
+     
+     const compra = valor
+
+    const desconto = t ? (compra * 15) / 100 : 0
+
+    const total = compra - desconto
+
+    window.alert(`
+        Compra: ${compra}
+        Desconto:${desconto}
+        Total: ${total}
+
+        `)*/
+
+
+        // Desafio
+
+
+        let nome = window.prompt("Qual seu nome?")
+        let n1 = Number(window.prompt("Qual sua primeira nota?"))
+        let n2 = Number(window.prompt("Qual sua segunda nota?"))
+        let f = Number(window.prompt("Qual sua frequência na escola?"))
+         
+        let m = (n1 + n2) / 2
+        let v = m >= 7 && f >= 75 ? "APROVADO" : "REPROVADO"
+
+        window.alert(`
+            Nome: ${nome}
+            Média: ${m} 
+            Frenquência: ${f} 
+            Situação: ${v}`)
 
 
 
