@@ -150,8 +150,98 @@ console.log(cafe)*/
 
 
 
-    Desafio 01
-    
+    //Aula 09
+
+    /*const texto = document.getElementById("titulo");
+
+    texto.textContent = "Estou aprendendo DOM!";*/
+
+    /*const paragrafo = document.querySelector(".texto");
+
+    paragrafo.textContent = "Aprendendo JavaScript!";*/
+
+
+    /*const paragrafo = document.querySelectorAll(".texto")[1]
+
+    paragrafo.textContent = "Aprendendo Dom!"*/
+
+    /*const cor = document.getElementById("titulo")
+
+    cor.style.color = 'blue'*/
+
+    /*const texto = document.getElementById("titulo")
+
+    texto.innerHTML = "Estou aprendendo <strong>dom</strong>!."*/
+
+    /*const t = document.getElementById("titulo")
+    t.textContent = "Aula 09 concluída!."
+
+    const p = document.querySelector(".texto")
+    p.textContent = "Estou aprendendo dom!"
+     
+    const cor = document.getElementById("titulo")
+    cor.style.color = 'blue'*/
+
+
+    // Aula 10
+
+
+    /*const botao = document.getElementById("botao")
+    const mensagem = document.getElementById("mensagem")
+
+
+    botao.addEventListener("click", function() {
+        mensagem.textContent = "Você clicou no botão!"
+    })*/
+
+
+       /* const texto = document.getElementById("texto")
+
+        texto.addEventListener("mouseenter", function(){
+            texto.style.color = 'blue'
+        })
+
+        texto.addEventListener("mouseout", function(){
+            texto.style.color = 'black'
+
+        })*/
+
+        /*const nome = document.getElementById("tx1")
+        const resultado = document.getElementById("resultado")
+
+        nome.addEventListener("input", function(){
+            resultado.textContent = nome.value
+        })*/
+
+            /*const texto = document.getElementById("texto")
+
+            texto.addEventListener("keydown", function(){
+                window.alert("Uma tecla foi pressionada!")
+            })*/
+
+                /*const texto = document.getElementById("texto")
+
+                texto.addEventListener("keyup", function(){
+                    window.alert("Você soltou uma tecla!")
+                })*/
+
+
+     const nome = document.getElementById("nome") 
+     const resultado = document.getElementById("resultado") 
+
+     nome.addEventListener("input", function(){
+        resultado.textContent = nome.value
+     })
+
+     const botao = document.getElementById("botao")
+
+     botao.addEventListener("click", function(){
+         nome.value = ""
+     })
+
+     botao.addEventListener("click", function(){
+        resultado.textContent ="Seu nome aparecerá aqui."
+     })
 
 
 

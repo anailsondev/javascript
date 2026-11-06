@@ -73,7 +73,7 @@ window.alert(`
         `)*/
 
 
-        // Desafio
+        // Desafio 06
 
 
         let nome = window.prompt("Qual seu nome?")
