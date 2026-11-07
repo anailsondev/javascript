@@ -76,7 +76,7 @@ window.alert(`
         // Desafio 06
 
 
-        let nome = window.prompt("Qual seu nome?")
+        /*let nome = window.prompt("Qual seu nome?")
         let n1 = Number(window.prompt("Qual sua primeira nota?"))
         let n2 = Number(window.prompt("Qual sua segunda nota?"))
         let f = Number(window.prompt("Qual sua frequência na escola?"))
@@ -88,7 +88,45 @@ window.alert(`
             Nome: ${nome}
             Média: ${m} 
             Frenquência: ${f} 
-            Situação: ${v}`)
+            Situação: ${v}`)*/
+
+
+            // Desafio 07
+
+
+            /*let produto = Number(window.prompt("Qual o preço do produto?"))
+            let compra = Number(window.prompt("Quantas unidades são?"))
+            let cliente = window.confirm("Possui cupom?")
+
+            let subtotal = produto * compra
+            const desconto = subtotal >= 100 && cliente ? (subtotal * 10) /100 :0
+            const total = subtotal - desconto
+
+            window.alert(`Subtotal: ${subtotal} Desconto: ${desconto} Total: ${total}`)*/
+
+
+            // Desafio 08
+
+            const nome = document.getElementById("nome")
+            const resultado = document.getElementById("resultado")
+            nome.addEventListener("input", function(){
+                resultado.textContent = nome.value
+            })
+
+            const botao = document.getElementById("botao")
+
+            botao.addEventListener("click", function(){
+                resultado.textContent = (`Olá ${nome.value}! Seja bem-vindo!`)
+                 titulo.style.color = 'blue'
+            })
+
+            const limpar = document.getElementById("limpar")
+            limpar.addEventListener("click", function(){
+                nome.value = ""
+                resultado.textContent = "Aguardando seu nome..."
+                
+                
+            })
 
 
 
