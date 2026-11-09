@@ -226,7 +226,7 @@ console.log(cafe)*/
                 })*/
 
 
-     const nome = document.getElementById("nome") 
+     /*const nome = document.getElementById("nome") 
      const resultado = document.getElementById("resultado") 
 
      nome.addEventListener("input", function(){
@@ -241,7 +241,7 @@ console.log(cafe)*/
 
      botao.addEventListener("click", function(){
         resultado.textContent ="Seu nome aparecerá aqui."
-     })
+     })*/
 
 
 

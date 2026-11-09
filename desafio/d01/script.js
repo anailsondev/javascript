@@ -107,7 +107,7 @@ window.alert(`
 
             // Desafio 08
 
-            const nome = document.getElementById("nome")
+           /* const nome = document.getElementById("nome")
             const resultado = document.getElementById("resultado")
             nome.addEventListener("input", function(){
                 resultado.textContent = nome.value
@@ -126,7 +126,7 @@ window.alert(`
                 resultado.textContent = "Aguardando seu nome..."
                 
                 
-            })
+            })*/
 
 
 
