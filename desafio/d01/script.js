@@ -129,6 +129,21 @@ window.alert(`
             })*/
 
 
+        // DESAFIO 09
+
+         /*const botao = document.getElementById("cadastrar")
+         const resultado = document.getElementById("resultado")
+         botao.addEventListener("click", function(){
+        let nome = window.prompt("Qual seu nome?")
+        let nota1 = Number(window.prompt("Digite sua primeira nota:"))
+        let nota2 = Number(window.prompt("Digite sua segunda nota:"))
+         let media = (nota1 + nota2) /2
+         let final = media >= 7 ? "Aprovado" : "Reprovado"
+         resultado.textContent =`Aluno: ${nome} | Média: ${media} | Situação: ${final}`
+
+         })*/
+
+
 
 
 

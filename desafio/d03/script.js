@@ -242,7 +242,66 @@ console.log(cafe)*/
      botao.addEventListener("click", function(){
         resultado.textContent ="Seu nome aparecerá aqui."
      })*/
+        
 
+        // AULA 11
+
+
+        /*let idade = 20
+        if(idade >= 18){
+            console.log("Maior de idade!")
+        } else {
+            console.log("Menor de idade!")
+        }*/
+
+        /*let nota = 5
+        if(nota >= 7){
+            console.log("Aprovado!")
+        } else {
+            console.log("Reprovado!")
+        }*/
+
+
+        /*let nota = 5
+        if(nota >= 9){
+            console.log("Excelente!")
+        } else if(nota >= 7) {
+            console.log("Aprovado!")
+            
+        } else{
+            console.log("Reprovado!")
+        }*/
+
+
+      /*let idade = 10
+      if(idade < 12){
+        console.log("Criança")
+      }else if(idade < 18){
+        console.log("Adolescente")
+      }else{
+        console.log("Adulto")
+      }*/
+
+
+    /*let preco = 150 
+    if(preco > 200){
+        console.log("Caro")
+    }else if(preco >= 100){
+        console.log("Preço médio")
+    }else{
+        console.log("Barato")
+    }*/
+
+    let nome = "Anailson"
+    let nota = 8
+    if(nota >= 9){
+        console.log("Excelente!")
+    }else if(nota >= 7){
+        console.log("Aprovado!")
+    }else{
+        console.log("Reprovado!")
+    }
+    console.log(`Aluno: ${nome} | Nota: ${nota}`)
 
 
 
