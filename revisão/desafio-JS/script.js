@@ -1,4 +1,7 @@
-//   Desafio 01
+// ============================================================
+// DESAFIO 01 | EXEMPLO 01
+// Descricao: solicita produto, preco e quantidade e exibe os dados.
+// ============================================================
 
 /*window.alert("Seja Bem-Vindo!")
 const produto = window.prompt("Qual o nome do produto?")
@@ -16,7 +19,10 @@ console.log(typeof preco)
 console.log(typeof unidade)*/  
 
 
-// Desafio 02
+// ============================================================
+// DESAFIO 02 | EXEMPLO 01
+// Descricao: calcula subtotal, desconto de 10% e total final.
+// ============================================================
 
 /*const preco = Number(window.prompt("Qual o preço do produto?"))
 const quantidade = Number(window.prompt("Quantas unidades são?"))
@@ -32,7 +38,10 @@ window.alert(`
     Total final: ${total}`)*/
 
 
-    // Desafio 03
+// ============================================================
+// DESAFIO 03 | EXEMPLO 01
+// Descricao: aprova com nota minima 7 e frequencia minima 75%.
+// ============================================================
 
     /*let nota = Number(window.prompt("Qual sua nota?"))
     let frenquencia = Number(window.prompt("Qual a porcentagem da sua frequência?"))
@@ -42,7 +51,10 @@ window.alert(`
     window.alert(n)*/
 
 
-    // Desafio 04
+// ============================================================
+// DESAFIO 04 | EXEMPLO 01
+// Descricao: permite acesso por idade minima ou autorizacao.
+// ============================================================
 
    /*let idade = Number(window.prompt("Qual sua idade?"))
     let autorizacao = window.confirm("Você possui autorização?")
@@ -52,7 +64,10 @@ window.alert(`
     window.alert(v)*/
 
 
-    //Desafio 05
+// ============================================================
+// DESAFIO 05 | EXEMPLO 01
+// Descricao: aplica desconto de 15% em compra de R$ 100 ou mais com cupom.
+// ============================================================
 
    /* let valor = Number(window.prompt("Qual o valor da compra?"))
     let cliente = window.confirm("O senhor possui cupom?")
@@ -73,7 +88,10 @@ window.alert(`
         `)*/
 
 
-        // Desafio 06
+// ============================================================
+// DESAFIO 06 | EXEMPLO 01
+// Descricao: calcula media e verifica aprovacao com frequencia minima.
+// ============================================================
 
 
         /*let nome = window.prompt("Qual seu nome?")
@@ -91,7 +109,10 @@ window.alert(`
             Situação: ${v}`)*/
 
 
-            // Desafio 07
+// ============================================================
+// DESAFIO 07 | EXEMPLO 01
+// Descricao: calcula subtotal e aplica desconto com valor minimo e cupom.
+// ============================================================
 
 
             /*let produto = Number(window.prompt("Qual o preço do produto?"))
@@ -105,7 +126,10 @@ window.alert(`
             window.alert(`Subtotal: ${subtotal} Desconto: ${desconto} Total: ${total}`)*/
 
 
-            // Desafio 08
+// ============================================================
+// DESAFIO 08 | EXEMPLO 01
+// Descricao: atualiza saudacao ao digitar e oferece botoes para limpar.
+// ============================================================
 
            /* const nome = document.getElementById("nome")
             const resultado = document.getElementById("resultado")
@@ -129,7 +153,10 @@ window.alert(`
             })*/
 
 
-        // DESAFIO 09
+// ============================================================
+// DESAFIO 09 | EXEMPLO 01
+// Descricao: cadastra aluno, calcula media de duas notas e mostra situacao.
+// ============================================================
 
          /*const botao = document.getElementById("cadastrar")
          const resultado = document.getElementById("resultado")
