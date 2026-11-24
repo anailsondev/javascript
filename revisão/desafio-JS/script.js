@@ -171,6 +171,81 @@ window.alert(`
          })*/
 
 
+         //DESAFIO 10
+
+
+/*let nome = window.prompt("Qual seu nome?")
+
+let preco = Number(window.prompt("Qual o valor do produto:"))
+
+let quantidade = Number(window.prompt("Quantas unidades são:"))
+
+let subtotal = preco * quantidade
+
+const desconto = subtotal >= 200 ?(subtotal * 10) / 100 :0
+
+const total = subtotal - desconto
+
+window.alert(`
+    Cliente:${nome}
+    Subtotal:R$ ${subtotal}
+    Desconto:R$ ${desconto}
+    Total:R$ ${total}`)
+    */
+
+
+    //DESAFIO 11
+
+/*let nome = window.prompt("Qual seu nome?")
+
+let nota = Number(window.prompt("Qual sua nota?"))
+
+let situacao = ""
+
+if(nota >= 9){
+
+    situacao = "Excelente"
+
+}else if(nota >= 7){
+
+    situacao = "Aprovado"
+
+}else {
+    situacao = "Reprovado"
+}
+
+window.alert(`Nome: ${nome} nota: ${nota} situação: ${situacao}`)*/
+
+      //DESAFIO 12
+
+
+/*let nome = window.prompt("Qual o nome do produto?")
+
+let preco = Number(window.prompt("Qual o preço do produto?"))
+
+let quantidade = Number(window.prompt("Qual a quantidades no estoque?"))
+
+let estoque = ""
+
+if (quantidade === 0){
+    estoque = "Produto esgotado"
+
+} else if (quantidade < 5){
+    estoque = "Estoque baixo"
+}else if {
+    estoque = "Estoque normal"
+}else {
+    estoque = "Estoque alto"
+}
+
+window.alert(`
+    Nome: ${nome}
+    Preço: R$ ${preco}
+    Quantidade: ${quantidade}
+    Classificação: ${estoque}`)*/
+
+
+
 
 
 
