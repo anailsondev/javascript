@@ -1,0 +1,1237 @@
+# 📘 JavaScript — Aulas 03 a 12
+
+## 🟦 Aula 03 — Alert, Prompt, Confirm e Console
+
+### `window.alert()`
+
+O `alert()` exibe uma mensagem em uma janela de alerta no navegador. É utilizado para informar algo ao usuário.
+
+```javascript
+window.alert("Boas-vindas!")
+```
+
+**O que acontece:** o navegador mostra a mensagem "Boas-vindas!".
+
+### `window.prompt()`
+
+O `prompt()` exibe uma pergunta e permite que o usuário digite uma resposta.
+
+```javascript
+window.prompt("Qual seu nome?")
+window.prompt("Qual sua idade?")
+```
+
+**O que acontece:** o navegador abre uma caixa de entrada para o usuário responder.
+
+### `window.confirm()`
+
+O `confirm()` apresenta uma pergunta com duas opções: confirmar ou cancelar.
+
+```javascript
+window.confirm("Deseja continuar?")
+```
+
+**O que acontece:** o usuário pode clicar em OK ou Cancelar.
+
+### `console.log()`
+
+O `console.log()` exibe informações no console do navegador ou do VS Code, quando utilizado com um ambiente que permite visualizar o console.
+
+```javascript
+console.log("Olá, Mundo!")
+```
+
+**Para que serve:** mostrar mensagens, valores de variáveis e resultados durante o desenvolvimento.
+
+---
+
+## 🟦 Aula 04 — Variáveis e Document
+
+### Criando uma variável
+
+```javascript
+let mensagem = "Estou aprendendo JavaScript"
+
+console.log(mensagem)
+```
+
+- `let` declara uma variável.
+- `mensagem` é o nome da variável.
+- `"Estou aprendendo JavaScript"` é o valor armazenado.
+- `console.log(mensagem)` mostra o valor da variável no console.
+
+### Alterando o título da página
+
+```javascript
+document.title = "Aula 04 - JavaScript"
+```
+
+O `document` representa o documento HTML carregado no navegador.
+
+A propriedade `title` permite alterar o título da página, aquele que aparece na aba do navegador.
+
+### O atributo `defer`
+
+O atributo `defer` é utilizado na tag `<script>` do HTML.
+
+Ele permite que o navegador carregue o arquivo JavaScript e espere a análise do HTML terminar antes de executar o script.
+
+Exemplo no HTML:
+
+```html
+<script src="script.js" defer></script>
+```
+
+### O que é o `document`?
+
+O `document` permite acessar e manipular elementos da página HTML usando JavaScript.
+
+Por exemplo, podemos selecionar um título, alterar um texto ou modificar uma cor.
+
+---
+
+## 🟦 Aula 05 — Variáveis e Tipos de Dados
+
+### Código da aula
+
+```javascript
+let nome = "Anailson DJB"
+let idade = 21
+const estudante = true
+var cidade = "Vargem-Grande"
+
+let observacao
+let informacao = null
+
+console.log(nome, typeof nome)
+console.log(idade, typeof idade)
+console.log(estudante, typeof estudante)
+console.log(cidade, typeof cidade)
+console.log(observacao, typeof observacao)
+console.log(informacao, typeof informacao)
+
+nome = "Anailson"
+
+console.log(nome)
+```
+
+### Explicando os tipos de dados
+
+**String** é utilizado para representar textos.
+
+```javascript
+let nome = "Anailson DJB"
+```
+
+O texto fica entre aspas.
+
+**Number** representa números, podendo ser inteiros ou decimais.
+
+```javascript
+let idade = 21
+let preco = 10.50
+```
+
+**Boolean** representa um valor lógico: verdadeiro ou falso.
+
+```javascript
+let estudante = true
+let bloqueado = false
+```
+
+**Undefined** indica que uma variável foi declarada, mas ainda não recebeu um valor.
+
+```javascript
+let observacao
+
+console.log(observacao)
+```
+
+O resultado será `undefined`.
+
+**Null** representa intencionalmente a ausência de um valor.
+
+```javascript
+let informacao = null
+```
+
+### O operador `typeof`
+
+O `typeof` é utilizado para verificar o tipo de um valor.
+
+```javascript
+let nome = "Anailson"
+
+console.log(typeof nome)
+```
+
+Resultado:
+
+```text
+string
+```
+
+### `let`, `const` e `var`
+
+**let** declara uma variável cujo valor pode ser alterado.
+
+```javascript
+let nome = "Anailson"
+
+nome = "DJB"
+
+console.log(nome)
+```
+
+Resultado: `DJB`.
+
+**const** declara uma variável que não pode ser reatribuída.
+
+```javascript
+const estudante = true
+```
+
+Não podemos fazer:
+
+```javascript
+estudante = false
+```
+
+Isso gera um erro porque a variável foi declarada com `const`.
+
+**var** é uma forma antiga de declarar variáveis.
+
+```javascript
+var cidade = "Vargem-Grande"
+```
+
+Atualmente, é comum utilizar `let` e `const`.
+
+---
+
+## 🟦 Aula 06 — Conversão de Dados
+
+### Código da aula
+
+```javascript
+let produto = window.prompt("Qual o nome do produto?")
+
+// Convertendo o preço para número
+let preco = Number(window.prompt("Qual o preço do produto?"))
+
+// Convertendo a quantidade para número inteiro
+let quantidade = Number.parseInt(window.prompt("Qual a quantidade?"))
+
+// Convertendo o peso para número decimal
+let peso = Number.parseFloat(window.prompt("Qual o peso do produto?"))
+
+let total = preco * quantidade
+
+// Formatando o total em moeda brasileira
+let totalFormatado = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+})
+
+window.alert(`Produto: ${produto}
+Preço: ${preco.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+})}
+Quantidade: ${quantidade}
+Peso: ${peso}
+Total da compra: ${totalFormatado}`)
+
+console.log(`Produto: ${produto}
+Preço: ${preco.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+})}
+Quantidade: ${quantidade}
+Peso: ${peso}
+Total da compra: ${totalFormatado}`)
+
+// Convertendo número em texto
+let idade = 21
+let idadeTexto = String(idade)
+
+console.log(idadeTexto)
+console.log(typeof idadeTexto)
+```
+
+### Explicando as conversões
+
+O `prompt()` recebe a resposta do usuário como texto.
+
+Por isso, quando queremos realizar cálculos, precisamos converter os valores para números.
+
+### `Number()`
+
+Converte um valor para o tipo numérico.
+
+```javascript
+let preco = Number("25")
+
+console.log(preco)
+```
+
+Resultado: `25`, agora como número.
+
+### `Number.parseInt()`
+
+Converte um valor para número inteiro.
+
+```javascript
+let quantidade = Number.parseInt("5")
+
+console.log(quantidade)
+```
+
+Resultado: `5`.
+
+### `Number.parseFloat()`
+
+Converte um valor para número decimal.
+
+```javascript
+let peso = Number.parseFloat("2.5")
+
+console.log(peso)
+```
+
+Resultado: `2.5`.
+
+### Calculando o total
+
+```javascript
+let total = preco * quantidade
+```
+
+O operador `*` realiza a multiplicação.
+
+Nesse exemplo, o preço é multiplicado pela quantidade para calcular o valor total da compra.
+
+### `toLocaleString()`
+
+O `toLocaleString()` permite formatar um valor de acordo com uma localidade.
+
+```javascript
+let totalFormatado = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+})
+```
+
+- `"pt-BR"` utiliza a formatação brasileira.
+- `style: "currency"` indica que o valor será formatado como moeda.
+- `currency: "BRL"` indica a moeda Real brasileiro.
+
+### Template string
+
+As template strings utilizam crases:
+
+```javascript
+`Produto: ${produto}`
+```
+
+O `${}` permite colocar variáveis ou expressões dentro do texto.
+
+Isso facilita a criação de mensagens com valores dinâmicos.
+
+### `String()`
+
+Converte um valor para texto.
+
+```javascript
+let idade = 21
+
+let idadeTexto = String(idade)
+
+console.log(idadeTexto)
+console.log(typeof idadeTexto)
+```
+
+O resultado do `typeof` será `string`.
+
+---
+
+## 🟦 Aula 07 — Operadores
+
+Os operadores são símbolos utilizados para realizar operações com valores e variáveis.
+
+### 1. Operadores aritméticos
+
+São utilizados para realizar cálculos matemáticos.
+
+| Operador | Significado |
+|---|---|
+| `+` | Adição |
+| `-` | Subtração |
+| `*` | Multiplicação |
+| `/` | Divisão |
+| `%` | Resto da divisão |
+| `**` | Potenciação |
+
+### Código
+
+```javascript
+let n1 = 10
+let n2 = 9
+
+let soma = n1 + n2
+let multiplicacao = n1 * n2
+let subtracao = n1 - n2
+let divisao = n1 / n2
+let resto = n1 % n2
+let potencia = n1 ** n2
+
+console.log(soma)
+console.log(multiplicacao)
+console.log(subtracao)
+console.log(divisao)
+console.log(resto)
+console.log(potencia)
+```
+
+### Explicando os operadores
+
+**Adição `+`**
+
+Soma dois valores.
+
+```javascript
+10 + 9
+```
+
+Resultado: `19`.
+
+**Subtração `-`**
+
+Subtrai um valor do outro.
+
+```javascript
+10 - 9
+```
+
+Resultado: `1`.
+
+**Multiplicação `*`**
+
+Multiplica dois valores.
+
+```javascript
+10 * 9
+```
+
+Resultado: `90`.
+
+**Divisão `/`**
+
+Divide um valor pelo outro.
+
+```javascript
+10 / 2
+```
+
+Resultado: `5`.
+
+**Resto `%`**
+
+Retorna o resto de uma divisão.
+
+```javascript
+10 % 3
+```
+
+Resultado: `1`, porque 3 cabe três vezes em 10 e sobra 1.
+
+**Potenciação `**`**
+
+Eleva um número a uma potência.
+
+```javascript
+2 ** 3
+```
+
+Resultado: `8`, porque \(2 \times 2 \times 2 = 8\).
+
+### 2. Incremento e decremento
+
+O incremento `++` aumenta o valor de uma variável em 1.
+
+```javascript
+let contador = 1
+
+contador++
+
+console.log(contador)
+```
+
+Resultado: `2`.
+
+O decremento `--` diminui o valor de uma variável em 1.
+
+```javascript
+let contador1 = 1
+
+contador1--
+
+console.log(contador1)
+```
+
+Resultado: `0`.
+
+### 3. Operadores de atribuição
+
+São utilizados para atribuir ou atualizar o valor de uma variável.
+
+| Operador | Significado |
+|---|---|
+| `=` | Atribui um valor |
+| `+=` | Soma e atribui |
+| `-=` | Subtrai e atribui |
+| `*=` | Multiplica e atribui |
+| `/=` | Divide e atribui |
+
+### Código
+
+```javascript
+let saldo = 500
+
+saldo += 200
+saldo -= 150
+saldo *= 2
+saldo /= 5
+
+console.log(saldo)
+```
+
+### Explicando
+
+```javascript
+saldo += 200
+```
+
+É a mesma coisa que:
+
+```javascript
+saldo = saldo + 200
+```
+
+O valor atual do saldo recebe mais 200.
+
+Da mesma forma:
+
+```javascript
+saldo -= 150
+```
+
+É equivalente a:
+
+```javascript
+saldo = saldo - 150
+```
+
+Os operadores `*=` e `/=` funcionam da mesma maneira, realizando multiplicação ou divisão e armazenando o resultado na variável.
+
+### 4. Operadores relacionais
+
+Os operadores relacionais são utilizados para **comparar dois valores**.
+
+Eles retornam um resultado lógico: `true` ou `false`.
+
+| Operador | Significado |
+|---|---|
+| `>` | Maior que |
+| `<` | Menor que |
+| `>=` | Maior ou igual a |
+| `<=` | Menor ou igual a |
+| `==` | Igualdade de valor |
+| `===` | Igualdade de valor e tipo |
+| `!=` | Diferente de |
+| `!==` | Diferente de valor ou tipo |
+
+### Código
+
+```javascript
+let n1 = 10
+let n2 = 7
+
+let total = n1 > n2
+let total1 = n1 < n2
+let total2 = n1 >= n2
+let total3 = n1 <= n2
+let total4 = n1 == n2
+let total5 = n1 === n2
+let total6 = n1 != n2
+let total7 = n1 !== n2
+
+console.log(total)
+console.log(total1)
+console.log(total2)
+console.log(total3)
+console.log(total4)
+console.log(total5)
+console.log(total6)
+console.log(total7)
+```
+
+### Explicando cada comparação
+
+**Maior que `>`**
+
+Verifica se o valor da esquerda é maior que o da direita.
+
+```javascript
+console.log(10 > 7)
+```
+
+Resultado: `true`.
+
+**Menor que `<`**
+
+Verifica se o valor da esquerda é menor que o da direita.
+
+```javascript
+console.log(10 < 7)
+```
+
+Resultado: `false`.
+
+**Maior ou igual `>=`**
+
+Verifica se o valor é maior ou igual ao outro.
+
+```javascript
+console.log(10 >= 10)
+```
+
+Resultado: `true`.
+
+**Menor ou igual `<=`**
+
+Verifica se o valor é menor ou igual ao outro.
+
+```javascript
+console.log(7 <= 10)
+```
+
+Resultado: `true`.
+
+**Igualdade `==`**
+
+Compara os valores, permitindo conversão de tipo.
+
+```javascript
+console.log(10 == "10")
+```
+
+Resultado: `true`.
+
+**Igualdade estrita `===`**
+
+Compara o valor e também o tipo de dado.
+
+```javascript
+console.log(10 === "10")
+```
+
+Resultado: `false`, porque um é número e o outro é texto.
+
+**Diferente `!=`**
+
+Verifica se os valores são diferentes, permitindo conversão de tipo.
+
+```javascript
+console.log(10 != 7)
+```
+
+Resultado: `true`.
+
+**Diferente estrito `!==`**
+
+Verifica se o valor ou o tipo são diferentes.
+
+```javascript
+console.log(10 !== "10")
+```
+
+Resultado: `true`, porque os tipos são diferentes.
+
+### 5. Ordem de precedência
+
+A ordem de precedência determina qual operação será realizada primeiro em uma expressão.
+
+```javascript
+let n1 = 12
+let n2 = 4
+let n3 = 6
+
+let total = n1 * n2 + n3
+let total1 = n1 * (n2 + n3)
+
+console.log(total)
+console.log(total1)
+```
+
+No primeiro cálculo:
+
+```javascript
+12 * 4 + 6
+```
+
+A multiplicação acontece primeiro.
+
+Resultado: `54`.
+
+No segundo cálculo:
+
+```javascript
+12 * (4 + 6)
+```
+
+Os parênteses fazem a soma acontecer primeiro.
+
+Resultado: `120`.
+
+**Importante:** os parênteses ajudam a controlar a ordem das operações.
+
+---
+
+## 🟦 Aula 08 — Operadores Lógicos e Ternário
+
+Os operadores lógicos são utilizados para combinar ou inverter condições.
+
+### 1. Operador `&&` — E lógico
+
+O `&&` exige que as duas condições sejam verdadeiras para retornar `true`.
+
+```javascript
+let idade = 17
+let autorizado = false
+
+console.log(idade >= 18 && autorizado)
+```
+
+Nesse exemplo:
+
+- `idade >= 18` é `false`.
+- `autorizado` é `false`.
+
+Como as duas condições não são verdadeiras, o resultado será `false`.
+
+### 2. Operador `||` — OU lógico
+
+O `||` retorna `true` quando pelo menos uma das condições é verdadeira.
+
+```javascript
+let autorizado = false
+let ativo = true
+
+console.log(autorizado || ativo)
+```
+
+Resultado: `true`, porque `ativo` é verdadeiro.
+
+### 3. Operador `!` — NÃO lógico
+
+O `!` inverte o valor lógico.
+
+- `true` passa a ser `false`.
+- `false` passa a ser `true`.
+
+```javascript
+let bloqueado = false
+
+console.log(!bloqueado)
+```
+
+Resultado: `true`.
+
+### 4. Operador ternário `? :`
+
+O operador ternário permite escolher entre dois resultados com base em uma condição.
+
+Estrutura:
+
+```javascript
+condicao ? resultadoSeVerdadeiro : resultadoSeFalso
+```
+
+### Código
+
+```javascript
+let idade = 17
+let autorizado = false
+
+console.log(idade >= 18 && autorizado
+    ? "Acesso permitido"
+    : "Acesso negado")
+```
+
+A condição é verificada.
+
+Se for verdadeira, será exibido `"Acesso permitido"`.
+
+Se for falsa, será exibido `"Acesso negado"`.
+
+---
+
+## 🟦 Aula 09 — DOM e Seleção de Elementos
+
+### O que é DOM?
+
+DOM significa **Document Object Model**.
+
+É a representação da página HTML que permite ao JavaScript acessar e modificar seus elementos.
+
+Por meio do DOM, podemos alterar textos, valores, cores e conteúdos da página.
+
+### 1. Selecionando pelo ID
+
+```javascript
+let titulo = document.getElementById("titulo")
+
+titulo.textContent = "Hello World"
+```
+
+O `getElementById()` seleciona um elemento pelo seu atributo `id`.
+
+O `textContent` altera o texto que está dentro do elemento.
+
+### 2. Selecionando pela tag
+
+```javascript
+let p = document.getElementsByTagName("p")
+
+p[0].textContent = "Descrição"
+```
+
+O `getElementsByTagName()` seleciona elementos pela tag HTML.
+
+Nesse exemplo, selecionamos os elementos `<p>`.
+
+O `[0]` acessa o primeiro elemento da coleção, porque os índices começam em zero.
+
+### 3. Selecionando pelo atributo `name`
+
+```javascript
+let input = document.getElementsByName("usuario")
+
+input[0].value = "JavaScript"
+```
+
+O `getElementsByName()` seleciona elementos que possuem o atributo `name` indicado.
+
+A propriedade `value` altera o valor de um campo, como um `<input>`.
+
+### 4. Selecionando pela class
+
+```javascript
+let produto = document.getElementsByClassName("produto")
+
+produto[0].textContent = "Como você vai?"
+```
+
+O `getElementsByClassName()` seleciona elementos pela classe CSS.
+
+Como pode existir mais de um elemento com a mesma classe, utilizamos o índice `[0]` para acessar o primeiro.
+
+### 5. `querySelector()`
+
+```javascript
+let produto1 = document.querySelector(".produto")
+
+produto1.textContent = "JavaScript"
+```
+
+O `querySelector()` seleciona o primeiro elemento que corresponde ao seletor CSS informado.
+
+Exemplos:
+
+```javascript
+document.querySelector("#titulo") // ID
+document.querySelector(".produto") // Class
+document.querySelector("p") // Tag
+```
+
+### 6. `querySelectorAll()`
+
+```javascript
+let produto2 = document.querySelectorAll(".produto")
+
+produto2[1].textContent = "Como vai?"
+```
+
+O `querySelectorAll()` seleciona todos os elementos que correspondem ao seletor CSS.
+
+O índice `[1]` acessa o segundo elemento, pois a contagem começa em zero.
+
+### 7. `innerHTML`
+
+```javascript
+let resultado = document.getElementById("resultado")
+
+resultado.innerHTML = "<strong>Hello World</strong>"
+```
+
+O `innerHTML` permite inserir conteúdo HTML dentro de um elemento.
+
+Nesse exemplo, o texto "Hello World" será exibido em negrito porque está dentro da tag `<strong>`.
+
+### Diferença entre `textContent` e `innerHTML`
+
+**textContent** coloca o conteúdo como texto.
+
+```javascript
+titulo.textContent = "<strong>Hello World</strong>"
+```
+
+O navegador exibirá as tags como texto.
+
+**innerHTML** interpreta o conteúdo como HTML.
+
+```javascript
+resultado.innerHTML = "<strong>Hello World</strong>"
+```
+
+O navegador interpretará a tag `<strong>` e exibirá o texto em negrito.
+
+### 8. Alterando o estilo
+
+```javascript
+titulo.style.color = "blue"
+```
+
+O `style` permite modificar o estilo CSS de um elemento pelo JavaScript.
+
+Nesse exemplo, a cor do texto do elemento selecionado será azul.
+
+---
+
+## 🟦 Aula 10 — Eventos
+
+### O que são eventos?
+
+Eventos são ações que acontecem na página, como clicar em um botão, movimentar o mouse ou pressionar uma tecla.
+
+O JavaScript pode detectar esses eventos e executar uma função.
+
+### Selecionando a área
+
+```javascript
+let area = document.getElementById("area")
+```
+
+Aqui estamos selecionando o elemento HTML que possui o ID `area`.
+
+### 1. Evento `mouseenter`
+
+Acontece quando o mouse entra na área do elemento.
+
+```javascript
+area.addEventListener("mouseenter", entrar)
+
+function entrar() {
+    area.textContent = "Você entrou na área!"
+}
+```
+
+Quando o mouse entra, a função `entrar()` é executada e altera o texto da área.
+
+### 2. Evento `click`
+
+Acontece quando o usuário clica em um elemento.
+
+```javascript
+area.addEventListener("click", clicar)
+
+function clicar() {
+    area.textContent = "Você clicou!"
+}
+```
+
+### 3. Evento `mouseout`
+
+Acontece quando o mouse sai da área do elemento.
+
+```javascript
+area.addEventListener("mouseout", sair)
+
+function sair() {
+    area.textContent = "Você saiu da área!"
+}
+```
+
+### 4. Evento `mousemove`
+
+Acontece quando o mouse se movimenta sobre o elemento.
+
+```javascript
+area.addEventListener("mousemove", mover)
+
+function mover() {
+    area.textContent = "Você moveu!"
+}
+```
+
+### 5. Evento `mousedown`
+
+Acontece quando o botão do mouse é pressionado.
+
+```javascript
+area.addEventListener("mousedown", pressionar)
+
+function pressionar() {
+    area.textContent = "Você pressionou!"
+}
+```
+
+### 6. Evento `mouseup`
+
+Acontece quando o botão do mouse é solto.
+
+```javascript
+area.addEventListener("mouseup", soltar)
+
+function soltar() {
+    area.textContent = "Você soltou!"
+}
+```
+
+### 7. Evento `keydown`
+
+Acontece quando uma tecla é pressionada.
+
+```javascript
+document.addEventListener("keydown", tecla)
+
+function tecla() {
+    area.textContent = "Uma tecla foi pressionada!"
+}
+```
+
+### O método `addEventListener()`
+
+O `addEventListener()` registra uma função para ser executada quando determinado evento acontecer.
+
+Estrutura:
+
+```javascript
+elemento.addEventListener("evento", funcao)
+```
+
+- `elemento` é o elemento que receberá o evento.
+- `"evento"` é o tipo de evento.
+- `funcao` é a função que será executada.
+
+---
+
+## 🟦 Aula 11 — Condições if, else if e else
+
+As estruturas condicionais permitem que o JavaScript tome decisões.
+
+### Código
+
+```javascript
+let nota = 8
+
+if (nota >= 9) {
+    console.log("Excelente")
+} else if (nota >= 7) {
+    console.log("Aprovado")
+} else {
+    console.log("Reprovado")
+}
+```
+
+### Explicando o código
+
+**`if` — Se**
+
+Verifica uma condição.
+
+```javascript
+if (nota >= 9)
+```
+
+Se a nota for maior ou igual a 9, será exibido `"Excelente"`.
+
+**`else if` — Senão, se**
+
+É utilizado quando a primeira condição não é verdadeira, mas queremos verificar outra condição.
+
+```javascript
+else if (nota >= 7)
+```
+
+Se a nota não for maior ou igual a 9, o JavaScript verifica se ela é maior ou igual a 7.
+
+**`else` — Senão**
+
+É executado quando nenhuma das condições anteriores é verdadeira.
+
+```javascript
+else {
+    console.log("Reprovado")
+}
+```
+
+Nesse exemplo, se a nota for menor que 7, será exibido `"Reprovado"`.
+
+---
+
+## 🟦 Aula 12 — Switch e Condições Aninhadas
+
+### 1. Estrutura `switch`
+
+O `switch` permite analisar o valor de uma variável e executar um bloco de código correspondente.
+
+### Código
+
+```javascript
+let dia = 7
+
+switch (dia) {
+    case 1:
+        console.log("Domingo")
+        break
+
+    case 2:
+        console.log("Segunda-feira")
+        break
+
+    case 3:
+        console.log("Terça-feira")
+        break
+
+    case 4:
+        console.log("Quarta-feira")
+        break
+
+    case 5:
+        console.log("Quinta-feira")
+        break
+
+    case 6:
+        console.log("Sexta-feira")
+        break
+
+    case 7:
+        console.log("Sábado")
+        break
+
+    default:
+        console.log("Dia não cadastrado")
+}
+```
+
+### Explicando cada parte
+
+**`switch`**
+
+Recebe o valor que será analisado.
+
+```javascript
+switch (dia)
+```
+
+Nesse exemplo, o JavaScript verifica o valor da variável `dia`.
+
+**`case`**
+
+Representa uma possibilidade de valor.
+
+```javascript
+case 7:
+    console.log("Sábado")
+```
+
+Se `dia` for igual a 7, será exibido `"Sábado"`.
+
+**`break`**
+
+Encerra a execução do caso atual e sai do `switch`.
+
+Sem o `break`, o JavaScript pode continuar executando os próximos casos.
+
+**`default`**
+
+É executado quando nenhum dos casos corresponde ao valor analisado.
+
+```javascript
+default:
+    console.log("Dia não cadastrado")
+```
+
+### 2. Condições aninhadas
+
+Condições aninhadas são condições colocadas dentro de outras condições.
+
+Elas permitem analisar situações mais complexas.
+
+### Código
+
+```javascript
+let idade = 19
+let autorizado = true
+
+if (idade >= 18) {
+    if (autorizado == true) {
+        console.log("Entrada permitida")
+    } else {
+        console.log("Precisa de autorização")
+    }
+} else {
+    console.log("Entrada negada")
+}
+```
+
+### Explicando o código
+
+Primeiro, o JavaScript verifica:
+
+```javascript
+if (idade >= 18)
+```
+
+Se a idade for maior ou igual a 18, ele verifica outra condição dentro desse bloco:
+
+```javascript
+if (autorizado == true)
+```
+
+Se a pessoa tiver idade suficiente e estiver autorizada, será exibido:
+
+```text
+Entrada permitida
+```
+
+Se tiver idade suficiente, mas não estiver autorizada:
+
+```text
+Precisa de autorização
+```
+
+Se a idade for menor que 18:
+
+```text
+Entrada negada
+```
+
+---
+
+## 📝 Revisão final — Aulas 03 a 12
+
+- **Aula 03:** alert, prompt, confirm e console.log.
+- **Aula 04:** variáveis, document e defer.
+- **Aula 05:** tipos de dados, let, const, var e typeof.
+- **Aula 06:** conversão de dados, Number, parseInt, parseFloat, String e formatação de moeda.
+- **Aula 07:** operadores aritméticos, atribuição, relacionais e precedência.
+- **Aula 08:** operadores lógicos e ternário.
+- **Aula 09:** DOM, seleção de elementos, textContent, innerHTML e style.
+- **Aula 10:** eventos e addEventListener.
+- **Aula 11:** if, else if e else.
+- **Aula 12:** switch, case, break, default e condições aninhadas.
+
+**Objetivo da revisão:** entender não apenas como escrever o código, mas também o que cada parte faz e por que ela é utilizada.

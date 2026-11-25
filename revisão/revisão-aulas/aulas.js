@@ -24,6 +24,8 @@ window.confirm("Deseja continuar?")
 
     // O atributo DEFER permite que o navegador carregue o arquivo JS e espere a análise do HTML terminar antes de executar o script 
 
+    // Document permite acessar e manipular a página
+
 
     // AULA 05
 
@@ -51,11 +53,13 @@ window.confirm("Deseja continuar?")
     // AULA 06
 
     /*let produto = window.prompt("Qual o nome produto?")
-
+    // O Number está sendo utilizado pra converter texto em números
     let preco = Number(window.prompt("Qual o preço do produto?"))
 
+    // o Number.parseInt Converte em números Inteiros
     let quantidade = Number.parseInt(window.prompt("Qual a quantidade?"))
-
+    
+    // O Number.parseFloat converte números em decimais
     let peso = Number.parseFloat(window.prompt("Qual o peso do Produto?"))
 
     let total = preco * quantidade
@@ -80,7 +84,13 @@ window.confirm("Deseja continuar?")
                  Quantidade: ${quantidade}
                  Peso: ${peso}
                  Total da compra: R$ ${totalFormatado}
-                 `)*/
+                 `)
+
+                // Convertendo números em texto
+                 let idade = 21
+                 let idadetexto = String(idade)
+                 console.log("idadetexto")
+                 console.log(typeof idadetexto)*/
 
             // Aula 07
 
@@ -168,7 +178,7 @@ window.confirm("Deseja continuar?")
 
             // Operadores && pra ser verdadeiro ás 2 condição deve ser true já || basta uma condição for true já ! inverte de true pra false de false pra true o operador ternário que ? permite escolher entre 2 condição true e false
 
-            let idade = 17
+            /*let idade = 17
             let autorizado = false
             let ativo = true
             let bloqueado = false
@@ -176,7 +186,184 @@ window.confirm("Deseja continuar?")
             console.log(idade >= 18 && autorizado)
             console.log( autorizado || ativo)
             console.log(! bloqueado)
-            console.log(idade >= 18 && autorizado ? "Acesso permitido" : "Acesso negado")
+            console.log(idade >= 18 && autorizado ? "Acesso permitido" : "Acesso negado")*/
+
+
+            //  Aula 09
+            // esse código seleciona pelo ID
+           /* let titulo = document.getElementById("titulo")
+            titulo.textContent = "Hello World"
+             
+
+            // esse código seleciona pela tag
+            let p = document.getElementsByTagName("p")
+            p[0].textContent = "Descrição"
+            
+
+            // esse código seleciona no input name
+            let input = document.getElementsByName("usuario")
+            input[0].value = "JavaScript"
+
+
+            // esse código seleciona pela class
+            let produto = document.getElementsByClassName("produto")
+            produto[0].textContent = "Como vc vai?"
+
+            
+            // esse código seleciona pelo seletor pode ser ID,CLASS e TAG
+            let produto1 = document.querySelector(".produto")
+            produto1.textContent = "JavaScript"
+             
+
+            //esse código seleciona todos elementos que correspondem a um seletor css
+            let produto2 = document.querySelectorAll(".produto")
+            produto2[1].textContent = "Como vai?"
+
+
+            let resultado = document.getElementById("resultado")
+
+            resultado.innerHTML = "<strong>Hello World</strong>"
+
+            // TextContent ele trabalha com texto dentro do JS
+
+            // InnerHTML ele interpreta a string atribuida ao HTML
+
+            // os indices começa em [0] que são métodos que retorna uma coleção
+
+            titulo.style.color = "blue"*/
+
+
+            // AULA 10
+
+           /* let area = document.getElementById("area")
+            
+
+            // Quando o mouse entra na área do elemento
+            area.addEventListener("mouseenter", entrar)
+
+            function entrar(){
+                area.textContent = "Você entrou na área!"
+            }
+            
+
+            // Quando vc clicar em um elemento
+            area.addEventListener("click", clicar)
+
+            function clicar(){
+                area.textContent = "Você Clicou!"
+            }
+            
+
+            // Quando o mouse de um elemento
+            area.addEventListener("mouseout", sair)
+
+            function sair(){
+                area.textContent = "Você saiu da área!"
+            }
+            
+
+            // Quando o mouse se movimenta
+            area.addEventListener("mousemove", mover)
+            
+            function mover(){
+                area.textContent = "Você moveu!"
+            }
+            
+
+            // Quando o botão mouse é pressionado
+            area.addEventListener("mousedown", pressionar)
+
+            function pressionar(){
+                area.textContent = "Você pressionou!"
+            }
+            
+
+            // Quando o botão é solto
+            area.addEventListener("mouseup", soltar)
+
+            function soltar(){
+                area.textContent = "Você soltou!"
+            }
+            // Quando uma tecla é pressionada
+            document.addEventListener("keydown", tecla)
+
+            function tecla(){
+                area.textContent = "Uma tecla foi pressionada!"
+            }*/
+
+            // O addEventListenet() Esse método registra uma função que será executada quando ocorrer determinado evento.
+
+
+            // AULA 11
+
+            /*let nota = 8
+
+            if (nota >= 9){
+                console.log("Excelente")
+            }else if(nota >= 7){
+                console.log("Aprovado")
+            }else {
+                console.log("Reprovado")
+            }*/
+
+            // O if - Se... então
+            // O else if - Senão, se
+            // O else - Senão
+
+            // AULA 12
+
+           /* let dia = 7
+
+            switch (dia){
+                case 1:
+                    console.log("Domingo")
+                break
+                case 2:
+                    console.log("Segunda-Feira")
+                break
+                case 3:
+                    console.log("Terça-Feira")
+                break
+                case 4:
+                    console.log("Quarta-Feira")
+                break
+                case 5:
+                    console.log("Quinta-Feira")
+                break
+                case 6:
+                    console.log("Sexta-Feira")
+                break
+                case 7:
+                    console.log("Sábado")
+                    break
+
+                    default:
+                        console.log("Dia não cadastrado")
+            }*/
+
+         // Switch: recebe o valor que será analisado
+
+         // Case: representa uma possibilidade
+
+         // Break: encerra o caso atual
+
+         // Default: executa quando nenhum caso corresponde ao valor
+
+         // Condição aninhadas são condições colocadas dentro de outras condições.Elas permitem analisar situações mais complexas
+         /*let idade = 19
+         let autorizado = true
+
+         if (idade >= 18){
+            if (autorizado == true){
+                console.log("Entrada permitida")
+            }else {
+            console.log("Precisa de autorização")
+         } 
+         } else {
+            console.log("Entrada negada")
+         }*/
+
+
 
 
 
