@@ -475,7 +475,7 @@ switch (dia){
         break
         default:
         console.log("Dia inválido")
-}*/
+}
 
 let agora = new Date()
 let dia = agora.getDay()
@@ -503,6 +503,58 @@ switch(dia){
         break
         default:
         console.log("Dia invalido")
-}
+}*/
    
+
+
+    //  AULA 13
+    // While repete comandos enquanto a condição for verdadeira
+   /* let contador = 1
+
+    while (contador <= 5){
+        console.log(contador)
+        contador++
+        
+    }*/
+
+    
+   /* let contador = 10
+    while (contador >= 1){
+        console.log(contador)
+        contador--
+    }*/
+
+
+   /*let contador = 1
+   let soma = 0
+   while (contador <= 5){
+     soma = soma + contador
+     contador++
+   }
+
+   console.log(soma)*/
+
+   // esse código comece em 2 menor ou igual a 100 e percorra somente números pares
+   /*let numero = 2
+   while (numero <= 10){
+    console.log(numero)
+    numero = numero + 2
+   }*/
+    // esse código comece em 1 menor ou igual a 100 e percorra somente números impares
+    /*let impar = 1
+    while (impar <= 100){
+        console.log(impar)
+        impar = impar + 2
+    }*/
+
+    //  Mostrar números Pares e impares
+    let numero = 1
+    while (numero <= 10){
+        if (numero % 2 == 0){
+            console.log(`Número par: ${numero}`)
+        }else{
+    console.log(`Número impar: ${numero}`)
+        }
+        numero++
+    }
    

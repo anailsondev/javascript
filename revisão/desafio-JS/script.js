@@ -245,6 +245,59 @@ window.alert(`
     Classificação: ${estoque}`)*/
 
 
+    // DESAFIO 13
+    let titulo = document.getElementById("titulo")
+    let nome = document.getElementById("nome")
+    let idade = document.getElementById("idade")
+    let botaocadastrar = document.getElementById("cadastrar")
+    let resultado = document.getElementById("resultado")
+    let contador = 0
+
+    botaocadastrar.addEventListener("click", cadastrar)
+
+
+    function cadastrar(){
+        let nomedigitado = nome.value;
+        let idadedigitada = idade.value;
+        let idadeconvertida = Number.parseInt(idadedigitada)
+
+        if (nomedigitado == ""){
+            resultado.textContent = "Precisa ser preenchido!"
+            return
+        }
+
+        if (idadeconvertida < 18){
+            resultado.textContent = "Cadastro não pode ser realizado"
+            return
+        }else {
+            resultado.textContent = "Cadastro permitido"
+            contador++     
+            switch (contador){
+                case 1:
+                    resultado.textContent = "Pessoa cadastrada"
+                break
+                case 2:
+                    resultado.textContent = "Segunda pessoa cadastrada"
+                break
+                default:
+                    resultado.textContent = "Limite de pessoas cadastrado"
+
+            }
+        }
+
+    }
+
+    titulo.addEventListener("mouseenter", passar)
+
+    function passar() {
+        titulo.textContent = "Cadastro do Anailson DJB"
+    }
+
+    
+
+
+
+
 
 
 
