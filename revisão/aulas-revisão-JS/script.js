@@ -508,7 +508,8 @@ switch(dia){
 
 
     //  AULA 13
-    // While repete comandos enquanto a condição for verdadeira
+    // While verifica a condição antes de executar o bloco e 
+    // repete comandos enquanto a condição for verdadeira
    /* let contador = 1
 
     while (contador <= 5){
@@ -548,7 +549,7 @@ switch(dia){
     }*/
 
     //  Mostrar números Pares e impares
-    let numero = 1
+   /* let numero = 1
     while (numero <= 10){
         if (numero % 2 == 0){
             console.log(`Número par: ${numero}`)
@@ -556,5 +557,40 @@ switch(dia){
     console.log(`Número impar: ${numero}`)
         }
         numero++
+    }*/
+
+
+        // AULA 14
+
+
+        /*let contador = 10
+
+
+    do { // O DO executa o bloco
+        console.log(contador)
+        contador--
+    } while(contador >= 1)*/ // O WHIlE verifica se deve repetir
+
+    /*for (let contador = 10; contador >= 1; contador--){
+        console.log(contador)
+    }*/ // O FOR reúne a inicialização, a condição e atualização
+
+   /* let tabuada = 5;
+
+    for (let i = 1; i <= 10; i++){
+        console.log(`${tabuada} * ${i} = ${tabuada * i}`)
+    }*/
+
+    /*let soma = 0
+    for (let i = 1; i <= 5; i++){
+        soma += i
     }
+    console.log(soma)*/
+
+    /*for(let i = 2; i <= 20; i+= 2){
+        console.log(i)
+        
+
+    }*/
+
    
